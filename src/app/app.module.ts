@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
+import { ProdutoService } from './produto.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,9 +14,10 @@ import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProdutoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
